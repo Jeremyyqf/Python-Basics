@@ -1,3 +1,135 @@
 Lists are sequences and are mutable (we can modify, replace or delete the items).
 
-Create lists
+
+
+Creating a list
+  
+  1. Using Square Brackets
+    # List of integers
+      a = [1, 2, 3, 4, 5]
+
+    # List of strings
+      b = ['apple', 'banana', 'cherry']
+
+    # Mixed data types
+      c = [1, 'hello', 3.14, True]
+
+  2. Using list() Constructor
+    We can also create a list by passing an iterable (like a string, tuple, or another list) to list() function.
+    Note: list() can oonly have one argument.
+          Example: If we want to create a list [1, 4, 8, 'apple', 3.23, True], we must put a tuple (1, 4, 8, 'apple', 3.23, True) into the argument,
+                  otherwise it won't work.
+
+    # From a tuple
+      a = list((1, 2, 3, 4.5)) 
+
+  3. Creating List with Repeated Elements
+    We can create a list with repeated elements using the multiplication operator.
+    # Create a list [2, 2, 2, 2, 2]
+      a = [2] * 5
+
+    # Create a list [0, 0, 0, 0, 0, 0, 0]
+      b = [0] * 7
+
+
+
+Accessing List Elements
+
+  Elements in a list can be accessed using indexing.
+  In Python, the index starts from 0, for example, if we want to access 3 in the list [23, 5, 3, 6, 89], the index is 2, not 3.
+  Negative indexing allows us to access elements from the end of the list. The negative indexing starts form -1.
+
+  a = [10, 20, 30, 40, 50]
+
+  # Access first element
+    print(a[0])  
+
+    Output: 10
+
+  # Access last element
+    print(a[-1])
+
+    Output: 50
+
+
+
+Adding Elements into List
+
+  We can add elements to a list because of the mutability of list.
+
+    1. append(): Adds an element at the end of the list.
+      # Initialize an empty list
+        a = []
+
+      # Adding 10 to end of list
+        a.append(10)  
+        print(a)  
+
+        Output: [10]
+
+    2. extend(): Adds multiple elements to the end of the list.
+      # Adding multiple elements  [15, 20, 25] at the end
+        a.extend([15, 20, 25])  
+        print(a)
+
+        Output: [10, 15, 20, 25]
+
+        Note: the argument in the extend() function must be iterable
+
+    3. insert(): Adds an element at a specific position.
+      # Inserting 5 at index 0
+        a.insert(0, 5)
+        print(a) 
+
+        Output: [5, 10, 15, 20, 25]
+
+
+
+Updating Elements into List
+  
+  We can change the value of an element by accessing it using its index.
+
+    a = [10, 20, 30, 40, 50]
+
+    # Change the second element
+    a[1] = 25 
+
+    print(a)
+
+    Output: [10, 25, 30, 40, 50]
+
+
+
+Removing Elements from List
+
+  We can remove elements from a list using:
+
+    1. remove(): Removes the first occurrence of an element.
+
+      a = [10, 20, 30, 40, 50]
+
+      # Removes the first occurrence of 30
+      a.remove(30)  
+
+      print(a)
+
+      Output: [10, 20, 40, 50]
+
+    2. pop(): Removes the element at a specific index or the last element if no index is specified.
+
+      # Removes the element at index 1 (20)
+      a.pop(1)  
+
+      print(a) 
+
+      Output: [10, 40, 50]
+
+    3. del statement: Deletes an element at a specified index.
+      # Deletes the first element (10)
+      del a[0]  
+
+      print(a)
+
+      Output: [40, 50]
+
+
